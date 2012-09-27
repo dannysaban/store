@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="component" group="" method="upgrade" >
+    <name>icepaybasic</name>
+    <creationDate>Feb 2012</creationDate>
+    <author>Olaf Abbenhuis</author>
+    <authorUrl>http://www.icepay.com</authorUrl>
+    <copyright>Copyright (C) 2012 ICEPAY B.V.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0.1</version>
+    <description><![CDATA[<a href="http://www.icepay.com" target="_blank">ICEPAY</a> payment plugin for Virtuemart 2]]>
+    </description>
+
+    <scriptfile>script.install.php</scriptfile>
+	<!-- Custom installer for 1.5 -->
+    <installfile>script.install.php</installfile>
+	<!-- Custom uninstaller for 1.5 -->
+    <uninstallfile>script.install.php</uninstallfile>
+
+
+    <administration>
+        <menu>ICEPAY Basic</menu>
+        <files>
+            <folder>files</folder>
+        </files>
+        <languages folder="files/administrator/language">
+            <language tag="en-GB">en-GB.plg_vmpayment_icepaybasic.ini</language>
+            <language tag="nl-NL">nl-NL.plg_vmpayment_icepaybasic.ini</language>
+        </languages>
+    </administration>
+	
+
+</install>

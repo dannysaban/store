@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="vmpayment" >
+    <name>VM - Payment, ICEPAY (Basic)</name>
+    <creationDate>Feb 2012</creationDate>
+    <author>Olaf Abbenhuis</author>
+    <authorUrl>http://www.icepay.com</authorUrl>
+    <copyright>Copyright (C) 2012 ICEPAY B.V.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0.1</version>
+    <description><![CDATA[<a href="http://www.icepay.com" target="_blank">ICEPAY</a> payment plugin for Virtuemart 2]]>
+    </description>
+
+    <files>
+        <filename plugin="icepaybasic">icepaybasic.php</filename>
+        <filename plugin="icepaybasic">icepaybasic.xml</filename>
+    </files>
+
+	
+    <params addpath="/administrator/components/com_virtuemart/elements" >
+        <param type="vmjpluginwarning" />
+        <param   type="spacer" default="VMPAYMENT_ICEPAYBASIC_MERCHANT_PARAMS" level="level1" />
+        <param type="text" name="icepaybasic_merchantid"  size="5" label="VMPAYMENT_ICEPAYBASIC_MERCHANTID"
+             default="00000" description="VMPAYMENT_ICEPAYBASIC_MERCHANTID_DESC" />
+        <param type="text" name="icepaybasic_secretcode"  size="40" label="VMPAYMENT_ICEPAYBASIC_SECRETCODE"
+             default="" description="VMPAYMENT_ICEPAYBASIC_SECRETCODE_DESC" />
+
+        <param name="url_postback"  type="icepayurl" scope="com_virtuemart" default="" label="VMPAYMENT_ICEPAYBASIC_URL_POSTBACK" description="VMPAYMENT_ICEPAYBASIC_URL_POSTBACK_DESC" />
+        <!--<param name="icepaybasic_paymentmethod" type="icepaypaymentmethod" scope="com_virtuemart" default="basicmode" label="VMPAYMENT_ICEPAYBASIC_PAYMENTMETHOD" description="VMPAYMENT_ICEPAYBASIC_PAYMENTMETHOD_DESC" />-->
+	
+        <param   type="spacer" default="VMPAYMENT_ICEPAYBASIC_STATUSCODES_PARAMS" level="level1" />
+        <param name="status_pending"    type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_ICEPAYBASIC_STATUS_OPEN" description="VMPAYMENT_ICEPAYBASIC_STATUS_OPEN_DESC" />
+        <param name="status_success"    type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_ICEPAYBASIC_STATUS_OK" description="VMPAYMENT_ICEPAYBASIC_STATUS_OK_DESC" />
+        <param name="status_canceled"   type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_ICEPAYBASIC_STATUS_ERR" description="VMPAYMENT_ICEPAYBASIC_STATUS_ERR_DESC" />
+        <param name="status_refund"     type="vmorderstate" scope="com_virtuemart" default="R" label="VMPAYMENT_ICEPAYBASIC_STATUS_REFUND" description="VMPAYMENT_ICEPAYBASIC_STATUS_REFUND_DESC" />
+        <param name="status_chargeback" type="vmorderstate" scope="com_virtuemart" default="R" label="VMPAYMENT_ICEPAYBASIC_STATUS_CBACK" description="VMPAYMENT_ICEPAYBASIC_STATUS_CBACK_DESC" />
+
+        <param   type="spacer" default="VMPAYMENT_ICEPAYBASIC_VIRTUEMART_PARAMS" level="level1" />
+        <param	name="payment_logos" type="vmfiles" label="VMPAYMENT_ICEPAYBASIC_LOGOS"
+		description="VMPAYMENT_ICEPAYBASIC_LOGOS_DESC"
+		directory="/images/stories/virtuemart/payment"
+		default="default" hide_default="1" hide_none="1"
+		stripext="0"   exclude="^_" />
+        <param name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_ICEPAYBASIC_CURRENCY" description="VMPAYMENT_ICEPAYBASIC_CURRENCY_DESC" />
+        <param name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_ICEPAYBASIC_COUNTRIES" description="VMPAYMENT_ICEPAYBASIC_COUNTRIES_DESC"/>
+        <param name="min_amount" type="text"  label="VMPAYMENT_ICEPAYBASIC_MIN_AMOUNT" description="VMPAYMENT_ICEPAYBASIC_MIN_AMOUNT_EXPLAIN" />
+        <param name="max_amount" type="text"  label="VMPAYMENT_ICEPAYBASIC_MAX_AMOUNT" description="VMPAYMENT_ICEPAYBASIC_MAX_AMOUNT_EXPLAIN" />
+        <param name="cost_per_transaction" type="text"  label="VMPAYMENT_ICEPAYBASIC_COST_PER_TRANSACTION" description="VMPAYMENT_ICEPAYBASIC_COST_PER_TRANSACTION_EXPLAIN" />
+        <param name="cost_percent_total" type="text"  label="VMPAYMENT_ICEPAYBASIC_COST_PERCENT_TOTAL" description="VMPAYMENT_ICEPAYBASIC_COST_PERCENT_TOTAL_EXPLAIN" />
+        <param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_ICEPAYBASIC_TAX" description="VMPAYMENT_ICEPAYBASIC_TAX_EXPLAIN" />
+    </params>
+
+</install>

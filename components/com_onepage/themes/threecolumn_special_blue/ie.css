@@ -1,0 +1,66 @@
+#vmMainPage div.middle_select select, div.middle_select select:hover, div.middle_select select:focus {
+ boder: none; 
+ background: none; 
+ background-color: transparent; 
+ border: none; 
+ border-color: transparent; 
+ margin: 0; 
+ padding; 0; 
+ box-shadow: none; 
+ outline: none none; 
+ min-width: 300px;
+ width: 300px;
+ position: static !important;
+ z-index: 10;
+} 
+#vmMainPage input.payment_item_radio {
+ margin-top: -10px !important;
+}
+#vmMainPage div.coupon_section {
+ width: 100%;
+ float: left; 
+ clear: both;
+
+}
+#vmMainPage div.after_select {
+ background: none !important;
+ display: none !important;
+ position: static !important;
+ width: 100%; 
+}
+#vmMainpage div.coupon_input_section  div.middle_input {
+ left: -2px;
+}
+
+#vmMainPage  input.inputbox{
+padding-top: 5px !important;
+}
+#vmMainPage div.before_select {
+ display: none !important;
+ background: none !important;
+ width: 8px; 
+ height: 25px; 
+ float: left;
+ overflow: visible;
+ left: 0;
+ position: static !important;
+}
+#vmMainPage div.middle_select {
+ background: none;
+ overflow: none;
+ position: static !important;
+ width: 99% !important;
+ min-width: 0 !important;
+ height: auto !important;
+}
+#vmMainPage div.before_select select {
+ display: inline-block !important;
+ position: static !important;
+ width: 100% !important;
+ min-width: 0 !important;
+ height: auto !important;
+}
+
+#vmMainPage select.inputbox {
+ width: 100% !important;
+}
